@@ -43,13 +43,13 @@ class Config():
     kg2 = 'data/' + language + '/triples_2'
     epochs = 150
 
-    # hidden_dim = 200#250
-    # in_dim = 200#300
-    # out_dim = 200
+    hidden_dim = 200#250
+    in_dim = 200#300
+    out_dim = 200
 #region my
-    hidden_dim = 20
-    in_dim = 20
-    out_dim = 20
+    # hidden_dim = 20
+    # in_dim = 20
+    # out_dim = 20
 #endregion
     #迭代拼接策略
     # hidden_dim = 400
