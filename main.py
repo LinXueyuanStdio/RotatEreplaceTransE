@@ -31,7 +31,7 @@ learning_rate = 0.001
 class Config():
     parser = argparse.ArgumentParser(description='RDGCN')
     parser.add_argument('--lang', type=str, default='zh_en')
-    parser.add_argument('--weight', type=float, default='0.5')
+    parser.add_argument('--weight', type=float, default='1')
     args = parser.parse_args()
     print(args.lang, args.weight)
     language = args.lang # zh_en | ja_en | fr_en

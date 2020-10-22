@@ -280,19 +280,19 @@ def build(in_dim, hidden_dim, out_dim, act_func, alpha, beta, gamma, k, lang, e,
 
 
     # Transe-A result init
-    # with open(file='data/' + lang + '_en/' + 'ATentsembed.txt', mode='r', encoding='utf-8') as f:
-    #     ATElines = f.readlines()
-    # embedding_list = []
-    # for i in range(len(ATElines)):
-    #     aline = ATElines[i].strip()
-    #     aline_list = aline.split()
-    #     aline_list = [float(j) for j in aline_list]
-    #     embedding_list.append(aline_list)
-    # attr_embeddings = tf.convert_to_tensor(embedding_list)
-    # attr_embeddings = tf.Variable(attr_embeddings)
+    with open(file='data/' + lang + '_en/' + 'ATentsembed.txt', mode='r', encoding='utf-8') as f:
+        ATElines = f.readlines()
+    embedding_list = []
+    for i in range(len(ATElines)):
+        aline = ATElines[i].strip()
+        aline_list = aline.split()
+        aline_list = [float(j) for j in aline_list]
+        embedding_list.append(aline_list)
+    attr_embeddings = tf.convert_to_tensor(embedding_list)
+    attr_embeddings = tf.Variable(attr_embeddings)
 
-    # #迭代+权重分配
-    # primal_X_2 = weight*primal_X_2 + (1-weight)*attr_embeddings
+    #迭代+权重分配
+    primal_X_2 = weight*primal_X_2 + (1-weight)*attr_embeddings
 
     #迭代+拼接策略
     # primal_X_2 = tf.concat([primal_X_2, attr_embeddings], 1)
