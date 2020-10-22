@@ -1,3 +1,10 @@
 /data
 /new
 /zip
+/trueData
+/dbp15k
+/rdgcn_embedding
+/.ipynb_checkpoints
+*.pyc
+/runs
+*.pem
